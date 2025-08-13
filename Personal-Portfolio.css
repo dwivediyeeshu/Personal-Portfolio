@@ -1,0 +1,512 @@
+:root {
+  /* Background Colors */
+  --background-color: #0D1B2A;
+  --background-secondary: #1B263B;
+
+  /* Text Colors */
+  --text-color: #E0E1DD;
+  --text-secondary: #A9B8C9;
+
+  /* Link Colors */
+  --link-color: #00B4D8;
+  --link-hover-color: #90E0EF;
+
+  --accent-color: #FFD166;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    max-width: 1400px;
+    margin: 0 auto;
+    color: var(--text-color);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+/* Navbar */
+
+nav {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 50px;
+    height: 80px;
+
+    animation: fadeInDown 1s ease forwards;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+nav .left a {
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: 600;
+
+    margin: 20px;
+
+}
+
+nav .right a {
+    color: var(--text-color);
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+
+
+}
+
+nav .right a:last-child {
+
+    color: var(--background-color);
+    background-color: var(--text-color);
+    padding: 5px 15px;
+    border-radius: 5px;
+
+}
+
+nav .right a:hover {
+    box-shadow: 0 0 15px var(--link-color);
+}
+
+nav .right a span {
+    margin-left: 5px;
+}
+
+/* About */
+.about-section {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 50px;
+    margin: 50px 0;
+    margin-bottom: 120px;
+    gap: 40px;
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.about-section .text {
+    flex: 5;
+}
+
+.about-section .text h1 {
+    font-size: 45px;
+}
+
+.about-section .text h2 {
+    font-size: 35px;
+}
+
+.about-section .text .links {
+    margin-top: 25px;
+}
+
+.about-section .text .links a {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid var(--link-color);
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-section .text .links a:hover {
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+    box-shadow: 0 0 15px var(--link-color);
+}
+
+.about-section .pic {
+    flex: 2;
+    display: flex;
+    justify-content: right;
+}
+
+.about-section .pic img {
+    width: 400px;
+    border-radius: 50%;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    animation: floatImg 6s ease-in-out infinite;
+}
+
+@keyframes floatImg {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotateY(0deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotateY(5deg);
+    }
+}
+
+
+/* ----- Skill --------*/
+
+.skills-section {
+
+    padding: 0 50px;
+    margin-bottom: 100px;
+    animation: fadeInUp 1.2s ease forwards;
+}
+
+.skills-section h2 {
+
+    text-align: center;
+    font-size: 35px;
+}
+
+.skills-section .text {
+
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.skills-section .cells {
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skills-section .cells .cell {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 200px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 1.5px solid #d3d3d3;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    perspective: 600px;
+}
+
+.skills-section .cells .cell:hover {
+    transform: rotateY(8deg) translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/*--- Project ---*/
+
+.project-section {
+    margin-bottom: 100px;
+    padding: 50px 20px;
+    animation: fadeInUp 1.4s ease forwards;
+}
+
+.project-section h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 40px;
+    color: var(--text-secondary);
+}
+
+/* Flex layout for cards */
+.project-section .project-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+/* Card style */
+.project-section .project-categories .project-category {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    flex: 1 1 calc(33.333% - 50px);
+    max-width: 300px;
+    min-width: 250px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    text-align: left;
+}
+
+/* Hover animation */
+.project-section .project-categories .project-category:hover {
+    transform: rotateX(5deg) translateY(-8px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Card heading */
+.project-section .project-categories .project-category h3 {
+    font-size: 1.3rem;
+    color: #007bff;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+/* Project list */
+.project-section .project-categories .project-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-section .project-categories .project-category ul li {
+    padding: 8px 0 8px 28px;
+    position: relative;
+    font-size: 0.95rem;
+    color: #555;
+    border-bottom: 1px solid #eee;
+    transition: color 0.2s ease;
+}
+
+.project-section .project-categories .project-category ul li::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f058";
+    /* fa-check-circle icon */
+    position: absolute;
+    left: 0;
+    top: 7px;
+    color: #28a745;
+    font-size: 0.9rem;
+    transition: transform 0.2s ease;
+}
+
+/* Hover effect on list item */
+.project-section .project-categories .project-category ul li:hover {
+    color: #007bff;
+}
+
+.project-section .project-categories .project-category ul li:hover::before {
+    transform: scale(1.3);
+}
+
+.project-section .project-categories .project-category ul li:last-child {
+    border-bottom: none;
+}
+
+/* --- Contact ----*/
+.contact-section {
+
+    padding: 0 50px;
+    margin-bottom: 100px;
+    animation: fadeInUp 1.6s ease forwards;
+}
+
+.contact-section h2 {
+
+    font-size: 35px;
+}
+
+.contact-section .group {
+
+    display: flex;
+    gap: 50px;
+}
+
+.contact-section .group .text {
+
+    flex: 3;
+    margin-top: 20px;
+}
+
+.contact-section .group form {
+
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section .group form input,
+.contact-section .group form textarea {
+
+    font-family: 'Poppins', sans-serif;
+    border: 1.5px solid var(--link-color);
+
+    background-color: transparent;
+    padding: 10px;
+    margin-bottom: 15px;
+    resize: none;
+    color: var(--text-color);
+}
+
+.contact-section .group form button {
+
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background-color: var(--link-color);
+    border: none;
+    height: 50px;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+
+}
+
+.contact-section .group form button:hover {
+    filter: brightness(0.9);
+    box-shadow: 0 0 15px var(--link-color);
+}
+
+
+.footer {
+  background-color: var(--background-secondary);
+  color: var(--text-color);
+  padding: 20px 0;
+  text-align: center;
+}
+
+
+
+@media (max-width: 900px) {
+    .project-section .project-categories .project-category {
+        flex: 1 1 calc(50% - 40px);
+    }
+}
+
+@media (max-width: 850px) {
+
+    /*--- Section 1 --*/
+    .about-section .text .h1 {
+        font-size: 35px;
+    }
+
+    .about-section .text .h2 {
+        font-size: 25px;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    /* Navbar */
+    nav {
+
+        padding: 0 20px;
+
+    }
+
+}
+
+@media (max-width: 760px) {
+
+    /*--- Section 1 --*/
+    .about-section {
+        flex-direction: column-reverse;
+    }
+
+    .about-section .pic img {
+
+        width: 200px;
+    }
+
+    .skills-section {
+        padding: 0 35px;
+    }
+
+    .skills-section .cells .cell {
+        width: 150px;
+    }
+
+    .contact-section .group {
+
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    /* Navbar */
+    nav {
+
+        padding: 0 20px;
+
+    }
+
+    nav .right a {
+
+        font-size: 22px;
+
+    }
+
+    nav .right a:last-child {
+
+        color: var(--text-color);
+        background-color: transparent;
+        padding: 0;
+
+    }
+
+    nav .right a span {
+
+        display: none;
+    }
+
+    .about-section {
+        padding: 0 20px;
+
+    }
+
+    .about-section .text h1 {
+        font-size: 30px;
+    }
+
+
+    .about-section .text h2 {
+        font-size: 30px;
+    }
+
+
+    .skills-section {
+        padding: 0 20px;
+    }
+
+    .skills-section .cells .cell {
+        width: 100px;
+    }
+
+    .project-section .project-categories .project-category {
+        flex: 1 1 100%;
+    }
+}
