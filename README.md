@@ -2,6 +2,9 @@
 
 This is my personal portfolio, built from scratch as part of my journey to become a Full-Stack Developer & Devops. It showcases my skills in HTML, CSS while providing a foundation for future AI and full-stack integration.
 
+## 🖼️ Preview  
+![Portfolio Page Screenshot](Assets/preview.png)
+
 ## Skills Learned
 - **Frontend Development:** HTML, CSS, responsive design, DOM manipulation, animations
 - **UI/UX:** Layouts, typography, color schemes, interactive elements
