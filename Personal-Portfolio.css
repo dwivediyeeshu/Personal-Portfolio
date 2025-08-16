@@ -310,8 +310,17 @@ nav .right a span {
     transition: transform 0.2s ease;
 }
 
+.project-section .project-categories .project-category ul li a{
+
+    color: #555;
+}
+
 /* Hover effect on list item */
 .project-section .project-categories .project-category ul li:hover {
+    color: #007bff;
+}
+
+.project-section .project-categories .project-category ul li a:hover {
     color: #007bff;
 }
 
