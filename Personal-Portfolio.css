@@ -1,17 +1,17 @@
 :root {
-  /* Background Colors */
-  --background-color: #0D1B2A;
-  --background-secondary: #1B263B;
+    /* Background Colors */
+    --background-color: #0D1B2A;
+    --background-secondary: #1B263B;
 
-  /* Text Colors */
-  --text-color: #E0E1DD;
-  --text-secondary: #A9B8C9;
+    /* Text Colors */
+    --text-color: #E0E1DD;
+    --text-secondary: #A9B8C9;
 
-  /* Link Colors */
-  --link-color: #00B4D8;
-  --link-hover-color: #90E0EF;
+    /* Link Colors */
+    --link-color: #00B4D8;
+    --link-hover-color: #90E0EF;
 
-  --accent-color: #FFD166;
+    --accent-color: #FFD166;
 }
 
 * {
@@ -310,7 +310,7 @@ nav .right a span {
     transition: transform 0.2s ease;
 }
 
-.project-section .project-categories .project-category ul li a{
+.project-section .project-categories .project-category ul li a {
 
     color: #555;
 }
@@ -398,10 +398,10 @@ nav .right a span {
 
 
 .footer {
-  background-color: var(--background-secondary);
-  color: var(--text-color);
-  padding: 20px 0;
-  text-align: center;
+    background-color: var(--background-secondary);
+    color: var(--text-color);
+    padding: 20px 0;
+    text-align: center;
 }
 
 
