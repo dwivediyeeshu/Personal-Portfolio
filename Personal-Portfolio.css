@@ -14,6 +14,22 @@
     --accent-color: #FFD166;
 }
 
+.lightmode{
+
+    --background-color: rgb(243, 224, 224);
+    --background-secondary: #e8e9ed;
+
+    /* Text Colors */
+    --text-color: #111528;
+    --text-secondary: #232738;
+
+    /* Link Colors */
+    --link-color: #00B4D8;
+    --link-hover-color: #90E0EF;
+
+    --accent-color: #FFD166;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -63,6 +79,12 @@ nav {
     }
 }
 
+nav .left {
+  display: flex;
+  align-items: center;
+  gap: 15px; 
+}
+
 
 nav .left a {
     color: var(--text-color);
@@ -72,6 +94,84 @@ nav .left a {
     margin: 20px;
 
 }
+
+#theme-switch {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: var(--background-secondary);
+  border: 2px solid var(--link-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(0, 180, 216, 0.3);
+}
+
+#theme-switch:hover {
+  border-color: var(--link-hover-color);
+  box-shadow: 0 0 14px rgba(0, 180, 216, 0.7);
+  transform: rotate(10deg) scale(1.08);
+}
+
+
+#theme-switch svg {
+  width: 24px;
+  height: 24px;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  position: absolute;
+}
+
+#theme-switch svg:first-child {
+  fill: #FFD166; 
+  filter: drop-shadow(0 0 6px rgba(255, 209, 102, 0.8));
+  animation: pulseSun 2.5s infinite ease-in-out;
+}
+
+#theme-switch svg:last-child {
+  opacity: 0;
+  transform: translateY(20px) rotate(-45deg);
+}
+
+.lightmode #theme-switch svg:first-child {
+  opacity: 0;
+  transform: translateY(-20px) rotate(45deg);
+  animation: none; 
+}
+
+.lightmode #theme-switch svg:last-child {
+  opacity: 1;
+  transform: translateY(0) rotate(0deg);
+  fill: #90E0EF; 
+  filter: drop-shadow(0 0 6px rgba(144, 224, 239, 0.8));
+  animation: pulseMoon 3s infinite ease-in-out;
+}
+
+@keyframes pulseSun {
+  0%, 100% {
+    filter: drop-shadow(0 0 6px rgba(255, 209, 102, 0.7));
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 12px rgba(255, 209, 102, 1));
+    transform: scale(1.08);
+  }
+}
+
+@keyframes pulseMoon {
+  0%, 100% {
+    filter: drop-shadow(0 0 6px rgba(144, 224, 239, 0.7));
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 12px rgba(144, 224, 239, 1));
+    transform: scale(1.08);
+  }
+}
+
 
 nav .right a {
     color: var(--text-color);
