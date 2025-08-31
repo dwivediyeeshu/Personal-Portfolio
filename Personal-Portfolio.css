@@ -504,6 +504,114 @@ nav .right a span {
     text-align: center;
 }
 
+/*----------- Chatbot CSS ------------- */
+
+/* Floating Chat Toggle Button */
+#chat-toggle {
+  position: fixed;
+  bottom: 20px;     /* distance from bottom */
+  right: 20px;      /* distance from right */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;       /* makes it circular */
+  border: none;
+  background: #0078ff;      /* primary color - change to match your theme */
+  color: #fff;
+  font-size: 26px;          /* size of chat icon (💬) */
+  line-height: 60px;        /* centers the icon vertically */
+  text-align: center;       /* centers the icon horizontally */
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* floating shadow */
+  transition: transform 0.2s ease, background 0.3s ease;
+  z-index: 9999;            /* ensures it stays on top */
+}
+
+/* Hover effect */
+#chat-toggle:hover {
+  background: #005fcc;   /* slightly darker shade */
+  transform: scale(1.1); /* subtle grow effect */
+}
+
+/* Active click effect */
+#chat-toggle:active {
+  transform: scale(0.95); /* shrink slightly when clicked */
+}
+
+/* Focus (keyboard accessibility) */
+#chat-toggle:focus {
+  outline: 3px solid rgba(0,120,255,0.5);
+  outline-offset: 2px;
+}
+
+/* Chat Window */
+#chat-window {
+  position: fixed;
+  bottom: 90px;     /* sits above the chat button */
+  right: 20px;
+  width: 300px;
+  height: 400px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 9998;
+}
+
+/* Hidden state (default) */
+.hidden {
+  display: none;
+}
+
+/* Header */
+#chat-header {
+  background: #0078ff;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Messages area */
+#chat-messages {
+  flex: 1;  /* takes all available vertical space */
+  padding: 10px;
+  overflow-y: auto; /* scroll if messages exceed height */
+  font-size: 14px;
+  background: #f9f9f9;
+}
+
+/* Input row */
+#chat-input-row {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+#chat-input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+#chat-send {
+  background: #0078ff;
+  border: none;
+  color: white;
+  padding: 0 15px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+#chat-send:hover {
+  background: #005fcc;
+}
+
+
 
 
 @media (max-width: 900px) {
