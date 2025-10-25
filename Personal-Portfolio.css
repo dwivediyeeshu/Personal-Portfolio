@@ -559,19 +559,28 @@ nav .right a span {
   z-index: 9998;
 }
 
-/* Hidden state (default) */
-.hidden {
-  display: none;
-}
-
 /* Header */
-#chat-header {
+#chat-header{
   background: #0078ff;
   color: white;
   padding: 12px;
   font-size: 16px;
   font-weight: bold;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+#closing {
+    background-color: #012b5a;
+    border: 2px solid #111528;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#closing:hover {
+    background-color: #003672;
 }
 
 /* Messages area */
@@ -611,7 +620,9 @@ nav .right a span {
   background: #005fcc;
 }
 
-
+#chat-window.hidden {
+  display: none !important;
+}
 
 
 @media (max-width: 900px) {

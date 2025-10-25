@@ -256,7 +256,10 @@
     <div id="chatbot-widget">
         <button id="chat-toggle">💬</button>
         <div id="chat-window" class ="hidden">
-            <div id="chat-header">Portfolio Assistant 🤖</div>
+            <div id="chat-header">
+                <p>Portfolio Assistant 🤖</p>
+                <button id="closing">X</button>
+            </div>
             <div id="chat-messages"></div>
             <div id="chat-input-row">
                 <input type="text" id="chat-input" placeholder="Ask Something...">
@@ -267,5 +270,20 @@
 
 
 </body>
+<script>
 
+    const chatbotDisplay = document.querySelector("#chat-toggle")
+    const exitButton = document.querySelector("#closing")
+    const chatWindow = document.querySelector("#chat-window")
+
+    chatbotDisplay.addEventListener('click', function(){
+         
+        chatWindow.classList.toggle("hidden");
+    })
+
+    exitButton.addEventListener('click', () => {
+        chatWindow.className = "hidden"
+
+    })
+</script>
 </html>
