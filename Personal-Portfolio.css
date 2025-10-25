@@ -505,9 +505,6 @@ nav .right a span {
 }
 
 
-
-
-
 @media (max-width: 900px) {
     .project-section .project-categories .project-category {
         flex: 1 1 calc(50% - 40px);
