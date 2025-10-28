@@ -1,3 +1,16 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
 const chatbotDisplay = document.querySelector("#chat-toggle");
 const exitButton = document.querySelector("#closing");
 const chatWindow = document.querySelector("#chat-window");
