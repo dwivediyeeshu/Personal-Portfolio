@@ -316,6 +316,7 @@ nav .right a span {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #a0a0a0;
 
     width: 200px;
     padding: 10px 20px;
